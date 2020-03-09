@@ -1,15 +1,7 @@
-## Simple URL Copy
-A Chrome extension that help you to copy URL
+## Simple URL Copy kidokun153版
+URLをコピーするのに使えるChromeの拡張です。
+[simple-url-copy](https://github.com/MISONLN41/simple-url-copy)を個人的に使いやすいように改造しました。
 
-## Install
-https://chrome.google.com/webstore/detail/cefkgjbbpagcilodnhboolbppdjlplip
+## 改造した点
+- HTMLフォーマットの追加
 
-## Features
-- Simple and Fast
-- It can copy as markdown style.
-- It can copy as [Backlog](https://www.backlog.com/) style.
-- It can copy and open menu by shotcut(ctrl+shift+c)
-- It can exclude query strings, and trim Japanese Amazon's verbose URL.
-
-## Demo
-![demo](https://github.com/ikedaosushi/simple-url-copy/blob/master/assets/how_to_use.gif)
