@@ -49,6 +49,9 @@ const copyUrl = menuType => {
 
     let text;
     switch (menuType) {
+      case "only":
+        text = `${url}`
+        break;
       case "markdown":
         text = `[${title}](${url})`
         break;
