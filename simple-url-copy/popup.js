@@ -58,9 +58,6 @@ const copyUrl = menuType => {
       case "html":
         text = `<a href="${url}">${title}</a>`
         break;
-      case "backlog":
-        text = `[[${title}:${url}]]`
-        break;
       case "simple":
         text = `${title} ${url}`
         break;
