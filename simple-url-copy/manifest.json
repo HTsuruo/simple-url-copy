@@ -2,7 +2,7 @@
   "name": "Simple URL Copy - kidokun153版",
   "description": "A tool that help you to copy url. HTML",
   "author": "@ikedaosushi and kidokun",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "icons": {
     "16": "icons/16.png",
