@@ -74,8 +74,8 @@ const copyUrl = menuType => {
 }
 
 const onInit = _ => {
-  // First copy simple
-  copyUrl("simple");
+  // First copy markdown
+  copyUrl("markdown");
   document.querySelectorAll(".mdl-button").forEach(el => {
     el.addEventListener("click", onClickCopyMenu);
   });
