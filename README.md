@@ -1,4 +1,4 @@
-## Simple URL Copy kidokun153版
+## Simple URL Copy kun153版
 URLをコピーするのに使えるChromeの拡張です。
 [simple-url-copy](https://github.com/ikedaosushi/simple-url-copy)を使いやすいように改造しています。
 
