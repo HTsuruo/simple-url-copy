@@ -66,6 +66,8 @@ const copyUrl = menuType => {
         break;
       case "markdown-with-newline":
         text = `[${title}](${url})\n`
+      case "markdown-with-list":
+        text = `- [${title}](${url})`
         break;
     }
     copyText(text);

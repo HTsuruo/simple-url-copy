@@ -7,6 +7,7 @@ URLをコピーするのに使えるChromeの拡張です。
 - Only URLを追加しbacklogを削除(v1.0.1)
 - Markdown Styke \n を追加(v1.0.2)[2020-03-17]
 - 最初のコピーをMarkdownに。(v1.0.3)[2020-08-23]
+- リストのMarkdownを追加(v1.0.4)[2020-09-12]
 
 ## 改造するかもしれない
 - Exclude Query の削除
