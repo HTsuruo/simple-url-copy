@@ -1,5 +1,7 @@
 
 const AMAZON_HOST = "www.amazon.co.jp";
+const GOOGLE_DRIVE_HOST = "drive.google.com";
+const FIREBASE_CONSOLE_HOST = "console.firebase.google.com";
 
 let stores = {
   "excludeQuery": false
@@ -34,6 +36,20 @@ const showCopied = _ => {
   setTimeout(_ => copied.classList.add("invisible"), 500);//5秒？で追加
 }
 
+// URL共有する際に都合の悪いログインしているアカウント特有の`/u/x`を取り除きます。
+const retrieveAccountPathFromOriginalUrl = rawUrl => {
+  const url = new URL(rawUrl);
+  if(url.hostname == GOOGLE_DRIVE_HOST || url.hostname == FIREBASE_CONSOLE_HOST) {
+    const splitWord = '/u/';
+    if ( rawUrl.indexOf(splitWord) == -1 ) {
+      return rawUrl;
+    }
+    const splited = url.origin.split(splitWord);
+    return splited[0] + "/"+ splited[1].slice(1);
+  }
+  return rawUrl;
+}
+
 const copyUrl = menuType => {
   chrome.tabs.query({ active: true, currentWindow: true, lastFocusedWindow: true }, function (tabs) {
     let url = tabs[0].url;//URLの取得
@@ -42,10 +58,12 @@ const copyUrl = menuType => {
     // Process AmazonURL
     url = extractAmazonUrl(url);
 
-    // Process Query 
+    // Process Query
     if(stores.excludeQuery) {
       url = excludeQuery(url);
     }
+
+    url = retrieveAccountPathFromOriginalUrl(url)
 
     let text;
     switch (menuType) {//textの選択
